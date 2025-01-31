@@ -1,0 +1,26 @@
+/* left, center, right, justify */
+/* p {
+  text-align: left;
+  letter-spacing: 0;
+  word-spacing: 0;
+  line-height: 1.5em;
+}
+
+p {
+  text-indent: 0.8em;
+} */
+
+ul {
+  list-style: circle;
+}
+
+/* li별로 지정하는 것도 가능 */
+ul > li:first-child {
+  /* ul에 있는 li중 첫번째꺼만 깃발 넣어줌 */
+  /* list-style: "🚩 "; */
+  list-style: url(https://showcases.yalco.kr/html-css/02-03/yalco.png);
+}
+
+ol {
+  list-style: lower-alpha;
+}
