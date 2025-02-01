@@ -1,0 +1,55 @@
+body {
+  font-size: 1.2em;
+}
+ul {
+  list-style: none;
+  padding-left: 0;
+}
+p {
+  width: 400px;
+}
+input {
+  font-size: 1.1em;
+}
+
+/* TODO: 가상요소 */
+/* ::after는 해당 요소 안쪽의 마지막 요소로 추가되는것 */
+/* ::before 해당 요소 안쪽의 마지막 첫 번째 요소로 추가되는것 */
+
+/* 바로 뒤에 가상의 요소 추가 */
+li.later::after {
+  content: "다음 강좌";
+  margin-left: 0.6em;
+  padding: 0.16em 0.36em;
+  font-size: 0.72em;
+  font-weight: bold;
+  color: white;
+  background-color: darkmagenta;
+  border-radius: 0.2em;
+}
+
+/* 바로 앞에 가상의 요소 추가 */
+li::before {
+  content: "";
+  display: inline-block;
+  margin: 0 0.4em;
+  width: 0.8em;
+  height: 0.8em;
+  background-image: url(./check.png);
+  background-size: contain;
+}
+
+/* 선택 영역 가상 요소 */
+.orange::selection {
+  background-color: orange;
+}
+.dark::selection {
+  color: lightgreen;
+  background-color: #222;
+}
+
+/* 플레이스홀더 가상 요소 */
+input:required::placeholder {
+  color: darkred;
+  background-color: yellow;
+}
