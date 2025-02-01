@@ -1,0 +1,51 @@
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+dl {
+  display: flex;
+  margin: 12px 0;
+  width: 440px;
+  justify-content: center;
+}
+dl > dd {
+  margin: 0 16px 0 0;
+  font-size: 1.2em;
+  font-weight: bold;
+  color: slateblue;
+}
+dl > dd:last-child {
+  margin-right: 0;
+}
+dl > dd:not(:last-child)::after {
+  content: "|";
+  padding-left: 16px;
+  opacity: 0.5;
+}
+
+button {
+  margin: 0 8px;
+  font-size: 1.5em;
+  border: 0;
+  color: gray;
+  background-color: transparent;
+  cursor: pointer;
+}
+button.current {
+  font-weight: bold;
+  color: slateblue;
+}
+
+.example {
+  margin-bottom: 16px;
+  font-size: 2em;
+  font-weight: bold;
+}
