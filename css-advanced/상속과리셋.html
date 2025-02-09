@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./cssReset.css" />
+    <link rel="stylesheet" href="./pseudo-class2.css" />
+    <link rel="stylesheet" href="./상속과리셋.css" />
+    <title>Document</title>
+
+    <style>
+      .parent {
+        font-weight: bold;
+        color: slateblue;
+      }
+      .parent > div {
+        color: olivedrab;
+      }
+      .parent > :last-child {
+        color: inherit;
+      }
+
+      p:not(:first-child) {
+        display: initial;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>inherit</h1>
+    <p>스스로의 값을 포기하고 부모로부터 받은 상속값을 적용합니다.</p>
+
+    <div class="parent">
+      <span class="class-label">.parent</span> 부모
+      <div>자식 1</div>
+      <div>자식 2</div>
+      <div>자식 3</div>
+    </div>
+
+    <h1>initial</h1>
+    <p>브라우저가 부여한 값을 포기하고 각 속성의 초기값을 적용합니다.</p>
+
+    <div>
+      <p>
+        <span class="class-label">p</span>
+        브라우저가 기본적으로 제공하는 <b>p</b>의 <em>display</em> 속성은
+        <strong>block</strong>이죠.
+      </p>
+      <p>
+        <span class="class-label">p</span>
+        그런데 속성값을 <em>initial</em>로 주게 되면
+      </p>
+      <p>
+        <span class="class-label">p</span>
+        이와 같이 <em>display</em> 속성의 초기값인
+      </p>
+      <p>
+        <span class="class-label">p</span>
+        <strong>inline</strong>으로 바뀌게 됩니다.
+      </p>
+    </div>
+  </body>
+</html>
