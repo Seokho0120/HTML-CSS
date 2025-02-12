@@ -1,0 +1,97 @@
+/* section {
+  position: relative;
+  width: 800px;
+  height: 640px;
+  background-color: lightblue;
+}
+
+div {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  background-color: slateblue;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); 
+} */
+/* flex 못쓸때 유용함; */
+
+body {
+  margin: 36px;
+}
+button {
+  all: unset;
+  margin-bottom: 2em;
+  padding: 0 2em;
+  height: 64px;
+  line-height: 64px;
+  font-size: 1.2em;
+  color: white;
+  background-color: tomato;
+  border-radius: 8px;
+  cursor: pointer;
+}
+#loading {
+  position: relative;
+  width: 600px;
+  height: 40px;
+  background-color: lightblue;
+  border-radius: 20px;
+  overflow: hidden;
+}
+#loading > div {
+  display: flex;
+  width: 200%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+#loading > div > div {
+  flex-grow: 1;
+}
+#loading > div > div:nth-child(odd) {
+  background-color: dodgerblue;
+}
+
+button._1:hover {
+  background-color: red;
+  border-radius: 30px;
+}
+
+button._1 {
+  transition: all 500ms;
+}
+
+button._2:hover {
+  animation: my-ani 200ms;
+}
+
+@keyframes my-ani {
+  from {
+    transform: scale(100%);
+  }
+  50% {
+    transform: scale(104%);
+  }
+  to {
+    transform: scale(100%);
+  }
+}
+
+#loading > div {
+  transform: skewX(-20deg);
+  animation-name: move;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+@keyframes move {
+  from {
+    left: -600px;
+  }
+  to {
+    left: 0;
+  }
+}
