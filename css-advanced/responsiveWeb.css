@@ -1,0 +1,31 @@
+@media (max-width: 768px) {
+  nav {
+    display: none;
+  }
+
+  #menu:hover + nav {
+    display: inherit;
+  }
+
+  nav ul li {
+    /* 코드를 덮어씌워져 속성이 설정안되면, 렌더링 순서와 다른 곳에서 덮어씌우는지 확인 */
+    display: block;
+    text-align: right;
+    padding: 0.5em 0;
+  }
+}
+
+@media (min-width: 769px) {
+  #menu {
+    display: none;
+  }
+
+  #wrapper {
+    grid-template-columns: 200px 1fr;
+  }
+
+  header,
+  footer {
+    grid-column: 1 / -1;
+  }
+}
