@@ -38,7 +38,7 @@ body {
   margin: 0;
   font-family: "Noto Sans KR", sans-serif;
 
-  /* 개발용 설정 */
+  /* FIXME: 스크롤 해보려고 개발용 설정 */
   min-height: 150vh;
 }
 
